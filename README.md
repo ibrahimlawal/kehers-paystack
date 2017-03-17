@@ -1,4 +1,4 @@
-## paystack
+## paystack ![Build status](https://travis-ci.org/kehers/paystack.svg?branch=master)
 
 A Nodejs API wrapper for [Paystack](https://paystack.co/).
 
@@ -74,9 +74,39 @@ paystack.transactions.list({
   - get
   - list
   - update
+- page
+  - create
+  - get
+  - list
+  - update
+- subscription
+  - create
+  - disable
+  - enable
+  - get
+  - list
+- subaccount
+  - create
+  - get
+  - list
+  - listBanks
+  - update
+  
+### Contributing
+
+- To ensure consistent code style, please follow the [editorconfig rules](http://obem.be/2015/06/01/a-quick-note-on-editorconfig.html) in .editorconfig
+
+### Tests
+
+To run tests, add your Paystack test secret key to `package.json`. (The test line should look something like this: `env KEY=sk_test_1a68ac96a0171fb72111a24295d8d31d41c28eed ./node_modules/.bin/mocha...`). Now run:
+
+```
+npm test
+```
+
+If you are contributing to the repo, kindly update the necessary test file in `/test` or add a new one and ensure all tests are passed before sending a PR.
 
 ### Todo
 
 - Proper resource examples
-- Tests
 - ES6 support
